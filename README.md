@@ -79,3 +79,18 @@ The second scatter plot illustrates the relationship between the number of carbo
   frameborder="0"
 ></iframe>
 
+### Interesting Aggregates
+
+The table below presents the average nutritional values grouped by the number of ingredients in each recipe. Specifically, it shows the mean values for calories, carbohydrates, and total fat content across recipes with different ingredient counts. This analysis highlights potential relationships between the complexity of a recipe, in terms of the number of ingredients, and its nutritional profile.
+
+| n_ingredients | calories (#) | carbohydrates (PDV) | total fat (PDV) |
+| --- | --- | --- | --- |
+| 1.0 | 714.65 | 11.357142857142858 | 91.0 |
+| 2.0 | 331.98340026773764 | 11.21954484605087 | 25.550200803212853 |
+| 3.0 | 306.11165670367205 | 10.617847993168231 | 22.244235695986337 |
+| 4.0 | 336.0086810979692 | 11.957598750278956 | 23.704753403258202 |
+| 5.0 | 347.8010182370821 | 12.111854103343465 | 25.438297872340424 |
+
+Note that the first five rows of the grouped table have been displayed.
+
+#
