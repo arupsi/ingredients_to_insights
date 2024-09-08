@@ -93,4 +93,18 @@ The table below presents the average nutritional values grouped by the number of
 
 Note that the first five rows of the grouped table have been displayed.
 
-#
+## Assessment of Missingness
+
+In this section, the relationship between missing values in the `average_rating` column and other variables in the dataset was explored. Specifically, a permutation test was performed to assess whether the missingness of `average_rating` is dependent on `cooking_time_binned` and `cooking_time_category`.
+
+### NMAR (Not Missing At Random) Considerations:
+The missingness in the `average_rating` column **does not appear to be NMAR** (Not Missing At Random). This is because the missing values in the `average_rating` column are unlikely to depend on the actual values of the ratings themselves, but rather on other variables like cooking time or other recipe characteristics. If the missingness were NMAR, it would imply that the reason for the missing values is directly related to the missing ratings, which doesn’t seem to be the case here.
+
+### P-Value for the Missingness-Dependent Column:
+When testing for dependency between the missingness of `average_rating` and `cooking_time_category`, the observed test statistic was **0.00394**, and the p-value was **0.322**. Since the p-value is greater than the commonly used significance level of 0.05, we **fail to reject the null hypothesis**, indicating that there is **no significant relationship** between the missingness of `average_rating` and cooking time categories. This suggests that whether a recipe's rating is missing or not does not depend on its cooking time category.
+
+### P-Value for the Missingness-Independent Column:
+Similarly, the permutation test for the `cooking_time_binned` variable yielded a p-value greater than 0.05, which further supports the conclusion that the missingness in `average_rating` is **not dependent on cooking time** (whether binned or categorized).
+
+Overall, the results of the permutation tests indicate that the missing values in `average_rating` are likely missing at random (MAR) with respect to the cooking time variables. This means the missingness of the rating data does not seem to be driven by cooking times, allowing for more flexible analysis without having to account for NMAR conditions.
+
