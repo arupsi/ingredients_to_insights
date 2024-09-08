@@ -129,11 +129,11 @@ Since the p-value (0.176) is greater than the significance level of 0.05, we **f
 
 ## Framing a Prediction Problem
 
-**Prediction Problem**: The goal of this project is to predict the calorie content of recipes based on the number of ingredients and total fat content. This is a regression problem because the response variable, **calories (#)**, is a continuous numeric value that we are trying to estimate.
+**Prediction Problem**: The goal of this project is to **predict the calorie content of recipes based on the number of ingredients and total fat content**. This is a regression problem because the response variable, `calories (#)`, is a continuous numeric value that we are trying to estimate.
 
-**Response Variable**: The response variable for this prediction problem is **calories (#)**. This variable corresponds to the prediction problem because we are interested in predicting the exact number of calories a recipe contains, making it the key target for our regression model.
+**Response Variable**: The response variable for this prediction problem is **`calories (#)`**. This variable corresponds to the prediction problem because we are interested in predicting the exact number of calories a recipe contains, making it the key target for our regression model.
 
-**Evaluation Metric**: The model is evaluated using the Root Mean Squared Error (RMSE). RMSE was chosen as the evaluation metric because it provides an interpretable estimate of how much, on average, the predicted calorie content deviates from the actual calorie content. RMSE is preferred over other metrics because it penalizes larger errors more heavily, making it a good fit for regression problems where outliers or large deviations are undesirable.
+**Evaluation Metric**: The model is evaluated using the **Root Mean Squared Error (RMSE)**. RMSE was chosen as the evaluation metric because it provides an interpretable estimate of how much, on average, the predicted calorie content deviates from the actual calorie content. RMSE is preferred over other metrics because it penalizes larger errors more heavily, making it a good fit for regression problems where outliers or large deviations are undesirable.
 
 The features used in this report include:
 - **n_ingredients**: The number of ingredients in a recipe.
