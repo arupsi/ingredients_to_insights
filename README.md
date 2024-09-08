@@ -72,3 +72,10 @@ The plot shows the distribution of calories across various recipes in the datase
 
 The second scatter plot illustrates the relationship between the number of carbohydrates (measured as a percentage of daily value) and the total number of calories in recipes. As expected, there is a positive correlation: recipes with higher carbohydrate content tend to have more calories. However, there are some outliers, such as a few recipes with extremely high carbohydrate content but relatively fewer calories. This plot demonstrates the general trend that carbohydrate-rich recipes are also higher in calories.
 
+<iframe
+  src="my_plot2.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
