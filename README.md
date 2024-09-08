@@ -174,4 +174,37 @@ The hyperparameters were selected using **GridSearchCV**, a method that exhausti
 ### Model Improvement:
 The final model showed an RMSE of **359.04**, which is higher than the baseline model’s RMSE of 269.42. Although the RandomForestRegressor model added complexity and hyperparameter tuning, it did not outperform the baseline linear regression model in this specific case. This result highlights that more complex models do not always guarantee better performance, particularly if the features or the data do not support the added complexity.
 
+## Fairness Analysis
 
+### Choice of Groups:
+
+- **Group X**: Recipes whose number of ingredients is less than or equal to the median number of ingredients in the training dataset.
+- **Group Y**: Recipes whose number of ingredients is greater than the median.
+
+### Evaluation Metrics:
+
+- **Root Mean Squared Error (RMSE)**: Used for evaluating prediction error.
+- **R² Score**: Assesses the proportion of variance in the dependent variable that is predictable from the independent variable(s).
+
+### Hypotheses:
+
+- **Null Hypothesis**: The model is fair (For a low number of ingredients vs high number of ingredients and low fat vs high fat, RMSE and R² are similar).
+- **Alternate Hypothesis**: The model is unfair (For a low number of ingredients vs high number of ingredients and low fat vs high fat, RMSE and R² are not similar).
+
+### Test Statistic:
+
+The difference in RMSE and R² scores between the two groups.
+
+### Significance Level:
+
+5% or 0.05
+
+### P-Value:
+
+0.0438
+
+### Conclusion: 
+
+Based on the analysis, there appears to be evidence enabling us to **reject the null hypothesis**, suggesting that the model may not be fair according to the defined metrics.
+
+Unlocking the recipe for success, this project showed how ingredient data can dish out powerful predictions, revealing the balance between simplicity, accuracy, and fairness.
