@@ -143,24 +143,18 @@ These features are readily available at the time of prediction since both the nu
 
 ## Baseline Model
 
-### Features:
 - **n_ingredients**: Quantitative (number of ingredients)
 - **total fat (PDV)**: Quantitative (total fat content)
 
-### Model Assessment:
 The RMSE score of our model came out to be approximately **269.42**, which indicates that, on average, the model’s predictions deviate from the actual values of calorie content of recipes by **269.42 units**. Since this number is too high, we would classify the performance of this model as **average**.
 
 ## Final Model
 
-### Features Added:
 - **n_ingredients**: This feature was included because the number of ingredients directly affects the complexity of a recipe, which in turn influences its calorie content. Recipes with more ingredients tend to have more calories, making this a valuable predictor.
-  
 - **total fat (PDV)**: Total fat content is an essential feature for predicting the calorie content of a recipe, as fat is one of the macronutrients contributing directly to calorie count. Including this feature improves the model's ability to estimate the calorie content accurately.
 
-### Model Architecture:
 The final model used is a **RandomForestRegressor**, which is a powerful ensemble method that works well for regression tasks by building multiple decision trees and averaging their predictions.
 
-### Hyperparameters Tuned:
 - **Number of Estimators (`n_estimators`)**: This refers to the number of trees in the forest. The model tested with a value of 100.
 - **Maximum Depth (`max_depth`)**: This controls how deep each tree in the forest can grow. The model tested with both `None` (no limit) and `10` as values.
 
@@ -168,42 +162,26 @@ The final model used is a **RandomForestRegressor**, which is a powerful ensembl
 - **Best number of estimators**: 100
 - **Best maximum depth**: 10
 
-### Hyperparameter Selection Method:
 The hyperparameters were selected using **GridSearchCV**, a method that exhaustively tests combinations of hyperparameters through cross-validation to find the best performing ones based on the root mean squared error (RMSE).
 
-### Model Improvement:
 The final model showed an RMSE of **359.04**, which is higher than the baseline model’s RMSE of 269.42. Although the RandomForestRegressor model added complexity and hyperparameter tuning, it did not outperform the baseline linear regression model in this specific case. This result highlights that more complex models do not always guarantee better performance, particularly if the features or the data do not support the added complexity.
 
 ## Fairness Analysis
 
-### Choice of Groups:
-
 - **Group X**: Recipes whose number of ingredients is less than or equal to the median number of ingredients in the training dataset.
 - **Group Y**: Recipes whose number of ingredients is greater than the median.
-
-### Evaluation Metrics:
 
 - **Root Mean Squared Error (RMSE)**: Used for evaluating prediction error.
 - **R² Score**: Assesses the proportion of variance in the dependent variable that is predictable from the independent variable(s).
 
-### Hypotheses:
+- **Null Hypothesis**: The model is fair for a low number of ingredients vs high number of ingredients and low fat vs high fat.
+- **Alternate Hypothesis**: The model is unfair for a low number of ingredients vs high number of ingredients and low fat vs high fat.
 
-- **Null Hypothesis**: The model is fair (For a low number of ingredients vs high number of ingredients and low fat vs high fat, RMSE and R² are similar).
-- **Alternate Hypothesis**: The model is unfair (For a low number of ingredients vs high number of ingredients and low fat vs high fat, RMSE and R² are not similar).
+The test statistic is the difference in RMSE and R² scores between the two groups.
 
-### Test Statistic:
+The significance level is 0.05.
 
-The difference in RMSE and R² scores between the two groups.
-
-### Significance Level:
-
-5% or 0.05
-
-### P-Value:
-
-0.0438
-
-### Conclusion: 
+The p-value is 0.0438
 
 Based on the analysis, there appears to be evidence enabling us to **reject the null hypothesis**, suggesting that the model may not be fair according to the defined metrics.
 
