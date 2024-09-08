@@ -61,7 +61,12 @@ Below is a preview of the first few rows of the dataset, showcasing the cleaned 
 
 The plot shows the distribution of calories across various recipes in the dataset. Most recipes contain between 0 and 1000 calories, with a significant spike around the lower calorie range. A small number of recipes exceed 1000 calories, but they are less common. This visualization highlights how most recipes in the dataset tend to be lower in calories, which may suggest that the dataset includes many healthy or low-calorie options.
 
-
+<iframe
+  src="my_plot.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 ### Bivariate Analysis
 
