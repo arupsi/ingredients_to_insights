@@ -141,6 +141,15 @@ The features used in this report include:
 
 These features are readily available at the time of prediction since both the number of ingredients and fat content are known when the recipe is created. These variables are also strong predictors of calorie content, as recipes with more ingredients and higher fat content are likely to have more calories.
 
+## Baseline Model
+
+### Features:
+- **n_ingredients**: Quantitative (number of ingredients)
+- **total fat (PDV)**: Quantitative (total fat content)
+
+### Model Assessment:
+The RMSE score of our model came out to be approximately **269**, which indicates that, on average, the model’s predictions deviate from the actual values of calorie content of recipes by **269 units**. Since this number is too high, we would classify the performance of this model as **average**.
+
 
 
 
