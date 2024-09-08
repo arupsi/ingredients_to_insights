@@ -57,8 +57,16 @@ Below is a preview of the first few rows of the dataset, showcasing the cleaned 
 | 286009 | 120 | 7 | ['butter', 'sugar', 'eggs', 'all-purpose flour', 'whole milk', 'pure vanilla extract', 'almond extract'] | 7 | 5.0 | 878.3 | 63.0 | 326.0 | 13.0 | 20.0 | 123.0 | 39.0 | 0 | 0 | Long |
 | 475785 | 90 | 17 | ['meatloaf mixture', 'unsmoked bacon', 'goat cheese', 'unsalted butter', 'eggs', 'baby spinach', 'yellow onion', 'red bell pepper', 'simply potatoes shredded hash browns', 'fresh garlic', 'kosher salt', 'white pepper', 'olive oil'] | 13 | 5.0 | 267.0 | 30.0 | 12.0 | 12.0 | 29.0 | 48.0 | 2.0 | 0 | 0 | Long |
 
+### Univariate Analysis
 
+The plot shows the distribution of calories across various recipes in the dataset. Most recipes contain between 0 and 1000 calories, with a significant spike around the lower calorie range. A small number of recipes exceed 1000 calories, but they are less common. This visualization highlights how most recipes in the dataset tend to be lower in calories, which may suggest that the dataset includes many healthy or low-calorie options.
 
+<div>
+   <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script type="text/javascript">
+</div>
 
+### Bivariate Analysis
 
+The second scatter plot illustrates the relationship between the number of carbohydrates (measured as a percentage of daily value) and the total number of calories in recipes. As expected, there is a positive correlation: recipes with higher carbohydrate content tend to have more calories. However, there are some outliers, such as a few recipes with extremely high carbohydrate content but relatively fewer calories. This plot demonstrates the general trend that carbohydrate-rich recipes are also higher in calories.
 
