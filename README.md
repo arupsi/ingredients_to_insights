@@ -108,3 +108,24 @@ Similarly, the permutation test for the `cooking_time_binned` variable yielded a
 
 Overall, the results of the permutation tests indicate that the missing values in `average_rating` are likely missing at random (MAR) with respect to the cooking time variables. This means the missingness of the rating data does not seem to be driven by cooking times, allowing for more flexible analysis without having to account for NMAR conditions.
 
+## Hypothesis Testing
+
+In this section, a permutation test was conducted to assess the relationship between cooking time and the average rating of recipes. The goal was to determine whether there is a significant difference in the average ratings of recipes based on their cooking time categories.
+
+### Null Hypothesis (H₀):
+There is no significant difference in the average ratings of recipes across different cooking time categories. Any observed differences in ratings are due to random chance.
+
+### Alternative Hypothesis (H₁):
+There is a significant difference in the average ratings of recipes across different cooking time categories.
+
+### Significance Level:
+A significance level of **0.05** was chosen for this test.
+
+### Test Statistic and P-Value:
+- **Observed difference in average ratings**: 0.012
+- **P-value**: 0.176
+
+### Interpretation of Results:
+Since the p-value (0.176) is greater than the significance level of 0.05, we **fail to reject the null hypothesis**. This means that there is no statistically significant difference in the average ratings of recipes across different cooking time categories. Any differences observed in the average ratings are likely due to random variation rather than a meaningful relationship between cooking time and ratings.
+
+
