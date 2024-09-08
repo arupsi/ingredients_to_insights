@@ -152,8 +152,6 @@ The RMSE score of our model came out to be approximately **269.42**, which indic
 
 ## Final Model
 
-## Final Model
-
 ### Features Added:
 - **n_ingredients**: This feature was included because the number of ingredients directly affects the complexity of a recipe, which in turn influences its calorie content. Recipes with more ingredients tend to have more calories, making this a valuable predictor.
   
